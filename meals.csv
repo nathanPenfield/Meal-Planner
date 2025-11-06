@@ -1,1 +1,2 @@
-meal_name,calories,price,has_milk,has_protein,recipe_link
+meal_name,calories,price,has_dairy,has_protein,recipe_link
+Penne with Vodka Sauce and Mini Meatballs,720,17.41,True,True,https://www.foodnetwork.com/recipes/food-network-kitchen/penne-with-vodka-sauce-and-mini-meatballs-3364941
