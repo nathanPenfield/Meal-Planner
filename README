@@ -1,0 +1,4 @@
+Project for Algorithms class
+
+csv follows format:
+name, calories(total),cost(total chatGPT estimate),has_dairy,has_meat,link
