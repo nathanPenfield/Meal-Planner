@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import Meal;
 
 public class MealArray{
     private Meal[] meals;
@@ -41,10 +40,10 @@ public class MealArray{
             e.printStackTrace();
         }
     }
-    public getMeals (){
+    public Meal[] getMeals(){
         return this.meals;
     }
-    public getSize(){
+    public int getSize(){
         return this.size;
     }
 }
