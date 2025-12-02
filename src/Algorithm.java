@@ -3,16 +3,12 @@ import java.lang.Math;
 public class Algorithm {
     private Meal[] meals;
     private int calorieGoal;
-    private boolean meatEligible;
-    private boolean dairyEligible;
     private boolean considerPrice;
     private int n;
 
     public Algorithm(Meal[] meals,int calorieGoal,boolean meatEligible,boolean dairyEligible,boolean considerPrice){
         this.meals = meals;
         this.calorieGoal = calorieGoal;
-        this.meatEligible = meatEligible;
-        this.dairyEligible = dairyEligible;
         this.considerPrice = considerPrice;
         this.n = meals.length;
         
