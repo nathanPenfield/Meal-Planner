@@ -36,21 +36,32 @@ public class Algorithm {
         return this.meals; // placeholder so it don't get mad.
     }
     private Meal best(Meal a,Meal b,int goal){
-        // get calories of meals
-        int aVal = a.getCalories();
-        int bVal = b.getCalories();
 
-        // get distance from goal
-        aVal = Math.abs(aVal-goal);
-        bVal = Math.abs(bVal-goal);
+        // define weight for cost to affect outcome.
+        float weight = 0.5f;
+
+        // get distance calories are from goal
+        int aVal = Math.abs(a.getCalories()-goal);
+        int bVal = Math.abs(b.getCalories()-goal);
 
         // consider cost if that is selected.
-        //if(this.considerPrice){
-            
-        //}
-        if(aVal<bVal){
+        float aScore = aVal;
+        float bScore = bVal;
+        if(this.considerPrice){
+            aScore = aVal + (weight*a.getPrice());
+            bScore = bVal + (weight*b.getPrice());
+        }
+
+        // return the best option
+        if(aScore<bScore){
             return a;
+        }else if(bScore<aScore){
+            return b;
         }else{
+            // if tie return closest to calorie goal
+            if(aVal<bVal){
+                return a;
+            }
             return b;
         }
     }
