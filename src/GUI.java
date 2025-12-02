@@ -37,6 +37,10 @@ public class GUI{
     }
 
     public static void main(String[] args){
-        new GUI();
+        //new GUI();
+        MealArray meals = new MealArray(40);
+        meals.loadCSV();
+        Meal[] mealsArray = meals.getMeals();
+        System.out.println(mealsArray[0].getMealName());
     }
 }
